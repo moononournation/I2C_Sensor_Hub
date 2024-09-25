@@ -111,12 +111,12 @@ void update_sy6970(uint8_t addr)
   {
     if (millis() > next_sy6970_readings_ms)
     {
-      uint16_t batt = sy6970.getBattVoltage();
+      uint16_t volt = sy6970.getSystemVoltage();
       if (xSemaphoreTake(lvglSemaphore, (TickType_t)10) == pdTRUE)
       {
-        lv_chart_set_next_value(ui_sy6970_Chart, ui_sy6970_Chart_Series, batt);
+        lv_chart_set_next_value(ui_sy6970_Chart, ui_sy6970_Chart_Series, volt);
         lv_chart_refresh(ui_sy6970_Chart); /*Required after direct set*/
-        lv_label_set_text_fmt(ui_sy6970_Label, "Batt %04dmV", batt);
+        lv_label_set_text_fmt(ui_sy6970_Label, "Pwr %04dmV", volt);
         xSemaphoreGive(lvglSemaphore);
       }
 

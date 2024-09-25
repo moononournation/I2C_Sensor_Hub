@@ -44,10 +44,11 @@
 
 // Display
 #include <Arduino_GFX_Library.h>
-#define GFX_EXTRA_PRE_INIT()       \
-  {                                \
-    pinMode(RT9080_EN, OUTPUT);    \
-    digitalWrite(RT9080_EN, HIGH); \
+#define GFX_EXTRA_PRE_INIT()           \
+  {                                    \
+    pinMode(SY6970_INT, INPUT_PULLUP); \
+    pinMode(RT9080_EN, OUTPUT);        \
+    digitalWrite(RT9080_EN, HIGH);     \
   }
 #define GFX_BL 48
 Arduino_DataBus *bus = new Arduino_HWSPI(9 /* DC */, 39 /* CS */, 18 /* SCK */, 17 /* MOSI */, 8 /* MISO */);
