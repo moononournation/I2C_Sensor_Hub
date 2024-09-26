@@ -43,7 +43,7 @@ void update_veml7700(uint8_t addr)
         lv_obj_set_align(screen_label, LV_ALIGN_TOP_MID);
         lv_obj_set_y(screen_label, 4);
         lv_obj_set_style_text_font(screen_label, LV_FONT_HEADER, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_label_set_text_fmt(screen_label, "0x%02x: VEML7700 Proximity Sensor", addr);
+        lv_label_set_text_fmt(screen_label, "0x%02x: VEML7700 Ambient Light Sensor", addr);
 
         ui_veml7700_Chart = lv_chart_create(ui_Screen[screen_count]);
         lv_obj_set_size(ui_veml7700_Chart, gfx->width() - 20, gfx->height() - LV_HEADER_SIZE);
