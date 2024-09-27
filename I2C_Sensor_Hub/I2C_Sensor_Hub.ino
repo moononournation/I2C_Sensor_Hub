@@ -25,9 +25,9 @@
    For LVGL V9:
    #define LV_USE_FLOAT          1
  ******************************************************************************/
-#define LV_HEADER_SIZE 40
-#define LV_FONT_HEADER &lv_font_montserrat_20
-#define LV_FONT_FIGURE &lv_font_montserrat_24
+#define LV_HEADER_SIZE 32 // 32 or 40
+#define LV_FONT_HEADER &lv_font_montserrat_14 // lv_font_montserrat_14 or lv_font_montserrat_20
+#define LV_FONT_FIGURE &lv_font_montserrat_14 // lv_font_montserrat_14 or lv_font_montserrat_20 or lv_font_montserrat_24
 #define NUMBER_OF_ROW 3
 #define CHART_POINT_COUNT 30
 #define READINGS_MS_INTERVAL 1000
@@ -35,9 +35,9 @@
 #include <Wire.h>
 
 // Uncomment one and only one dev board pins definition
-// #include "T_DISPLAY_S3.h"
+#include "T_DISPLAY_S3.h"
 // #include "T_DISPLAY_S3_AMOLED.h"
-#include "T_DISPLAY_S3_PRO.h"
+// #include "T_DISPLAY_S3_PRO.h"
 
 #include "lvgl_func.h"
 #include "sensors_func.h"
