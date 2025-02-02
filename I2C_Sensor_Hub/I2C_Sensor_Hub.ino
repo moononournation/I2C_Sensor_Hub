@@ -35,9 +35,9 @@
 #include <Wire.h>
 
 // Uncomment one and only one dev board pins definition
-#include "T_DISPLAY_S3.h"
-// #include "T_DISPLAY_S3_AMOLED.h"
-// #include "T_DISPLAY_S3_PRO.h"
+#include "PINS_T-DISPLAY_S3.h"
+// #include "PINS_T-DISPLAY_S3_AMOLED.h"
+// #include "PINS_T-DISPLAY_S3_PRO.h"
 
 #include "lvgl_func.h"
 #include "sensors_func.h"
