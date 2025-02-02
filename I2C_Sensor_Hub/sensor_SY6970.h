@@ -1,5 +1,6 @@
 #pragma once
 
+#define XPOWERS_CHIP_SY6970
 #include <XPowersLib.h>
 
 XPowersPPM sy6970;
